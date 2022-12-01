@@ -1,0 +1,1 @@
+# Basic Online Store with HTML, CSS and JavaScript
