@@ -1,6 +1,15 @@
 const menuEmail = document.querySelector('.navbar-email');
 const profileMenu = document.querySelector('.profile-menu');
 const arrow = document.querySelector('.arrow');
+const iconMenu = document.querySelector('.menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+//Mobile menu hide/show
+iconMenu.addEventListener('click', toggleMobileMenu);
+
+function toggleMobileMenu() {
+  mobileMenu.classList.toggle('inactive');
+}
 
 //for mouseover in "Email"
 menuEmail.addEventListener('mouseover', toggleProfileMenu);
