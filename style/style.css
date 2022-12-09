@@ -314,6 +314,7 @@ nav {
 }
 
 .shopping-cart1 {
+    background-color: var(--white);
     width: 360px;
     height: 100vh;
     box-sizing: border-box;
@@ -808,6 +809,7 @@ background: var(--hospital-green);
     }
 
     .mobile-menu {
+        background-color: var(--white);
         position: absolute;
         padding: 0;
         margin: 40px;

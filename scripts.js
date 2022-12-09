@@ -11,13 +11,16 @@ shoppingCartIcon.addEventListener('click', toggleAside);
 
 function toggleAside() {
     aside.classList.toggle('inactive');
+    mobileMenu.classList.add('inactive');
+    profileMenu.classList.add('inactive');
 }
 
 //Mobile menu hide/show
 iconMenu.addEventListener('click', toggleMobileMenu);
 
 function toggleMobileMenu() {
-  mobileMenu.classList.toggle('inactive');
+    mobileMenu.classList.toggle('inactive');
+    aside.classList.add('inactive');
 }
 
 //for mouseover in "Email"
@@ -25,6 +28,7 @@ menuEmail.addEventListener('click', toggleProfileMenu);
 
 function toggleProfileMenu() {
     profileMenu.classList.toggle('inactive');
+    aside.classList.add('inactive');
 }
 
 //For the arrow to rotate when "Emails" mouseover
