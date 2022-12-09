@@ -118,11 +118,13 @@ nav {
 }
 
 .profile-menu {
+    height: 230px;
+    border: 1px solid var(--very-light-pink);
     position: fixed;
     top: 61px;
     right: 120px;
     margin-right: 16px;
-    border-radius: 5px;    
+    border-radius: 8px;    
 }
 
 .profile-menu ul li a {
