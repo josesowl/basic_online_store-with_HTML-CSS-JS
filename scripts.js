@@ -12,15 +12,15 @@ function toggleMobileMenu() {
 }
 
 //for mouseover in "Email"
-menuEmail.addEventListener('mouseover', toggleProfileMenu);
-menuEmail.addEventListener('mouseout', outProfileMenu);
+menuEmail.addEventListener('click', toggleProfileMenu);
+//menuEmail.addEventListener('mouseout', outProfileMenu);
 
 function toggleProfileMenu() {
     profileMenu.classList.toggle('inactive');
 }
-function outProfileMenu() {
-    profileMenu.classList.toggle('inactive');
-}
+//function outProfileMenu() {
+//    profileMenu.classList.toggle('inactive');
+//}
 
 //For the arrow to rotate when "Emails" mouseover
 menuEmail.addEventListener('mouseover', arrowDown);
