@@ -50,6 +50,10 @@ nav {
     height: 60px;
 }
 
+.navbar-right ul li:last-child {
+    margin-right: 24px;
+}
+
 .navbar-left {
     display: flex;
 }
@@ -318,19 +322,21 @@ nav {
 
 .shopping-cart1 {
     background-color: var(--white);
-    width: 360px;
-    height: 100vh;
+    width: 380px;
+    height: 620px;
     box-sizing: border-box;
     position: absolute;
     padding: 0 24px;
     right: 2px;
+    border-radius: 5px;
+    box-shadow: var(--very-light-pink) 0px 0px 10px 0px;
 }
 
 .shopping-cart1-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    padding: 20px;
     position: absolute;
     right: 0;
 }
@@ -345,6 +351,7 @@ nav {
     margin-bottom: 20px;
     font-size: var(--lg);
     text-align: left;
+    height: 100%;
 }
 
 .shopping-cart-content {
@@ -722,8 +729,7 @@ background: var(--hospital-green);
     }
 
     .shopping-cart1 {
-        width: 96%;
-        align-items: flex-start;
+        width: 100%;
     }
 
     .shopping-cart-header h1 {
@@ -734,8 +740,11 @@ background: var(--hospital-green);
     .shopping-cart1-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
+        margin-left: 24px;
+        width: 90%;
+        height: 100%;
+        position: relative;
+        padding: 0;
     }
 
     .secondary-button {
@@ -746,7 +755,7 @@ background: var(--hospital-green);
     }
 
     .checkout-button {
-        position: absolute;
+        position: relative;
         bottom: 0;
         margin-bottom: 25px;
     }
@@ -763,11 +772,20 @@ background: var(--hospital-green);
         gap: 26px;
     }
 
+    .add-to-cart {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        object-fit: cover;
+        align-self: center;
+        cursor: pointer;
+    }
+
     .product-card {
         width: var(--card-size-mb);
     }
     
-    .product-card img {
+    .product-image {
         width: var(--card-size-mb);
         height: var(--card-size-mb);
         border-radius: 20px;
@@ -818,7 +836,7 @@ background: var(--hospital-green);
     }
 
     .navbar-right div {
-        margin-right: 0;
+        margin-right: 12px;
     }
 
     .profile-menu {
@@ -826,11 +844,13 @@ background: var(--hospital-green);
     }
 
     .mobile-menu {
-        background-color: var(--white);
         position: absolute;
-        padding: 0;
-        margin: 40px;
-        top: 0px;
+        background-color: var(--white);
+        top: 61px;
+        left: 0;
+        width: calc(100% - 24px);
+        height: 100%;
+        padding-left: 24px;
     }
 
     .mobile-menu a {
