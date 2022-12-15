@@ -804,12 +804,12 @@ background: var(--hospital-green);
     .product-detail {
         background-color: var(--white);
         max-width: 100%;
-        position: relative;
-        right: 0;
+        position: absolute;
     }
 
     .add-to-cart-button {
         width: 100%;
+        margin-bottom: 24px;
     }
 
     .nav {
