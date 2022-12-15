@@ -6,35 +6,47 @@ const arrow = document.querySelector('.arrow');
 const iconMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetails = document.querySelector('.product-detail');
+const closeButtonProductDetail = document.querySelector('.close-button');
 
-//for click in "shopping cart"
+//Event listeners
 shoppingCartIcon.addEventListener('click', toggleAside);
+menuEmail.addEventListener('click', toggleProfileMenu);
+menuEmail.addEventListener('mouseover', arrowDown);
+menuEmail.addEventListener('mouseout', arrowUp);
+iconMenu.addEventListener('click', toggleMobileMenu);
+closeButtonProductDetail.addEventListener('click', closeProductDetail);
 
 function toggleAside() {
     aside.classList.toggle('inactive');
     mobileMenu.classList.add('inactive');
     profileMenu.classList.add('inactive');
+    productDetails.classList.add('inactive');
 }
-
-//Mobile menu hide/show
-iconMenu.addEventListener('click', toggleMobileMenu);
 
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive');
     aside.classList.add('inactive');
+    productDetails.classList.remove('inactive');
 }
-
-//for mouseover in "Email"
-menuEmail.addEventListener('click', toggleProfileMenu);
 
 function toggleProfileMenu() {
     profileMenu.classList.toggle('inactive');
+    mobileMenu.classList.add('inactive');
+    productDetails.classList.add('inactive');
     aside.classList.add('inactive');
 }
 
-//For the arrow to rotate when "Emails" mouseover
-menuEmail.addEventListener('mouseover', arrowDown);
-menuEmail.addEventListener('mouseout', arrowUp);
+function openProduct() {
+    productDetails.classList.remove('inactive');
+    aside.classList.add('inactive');
+    mobileMenu.classList.add('inactive');
+    profileMenu.classList.add('inactive');
+}
+
+function closeProductDetail() {
+    productDetails.classList.add('inactive');
+}
 
 function arrowDown() {    
     arrow.style.transform = 'rotate(90deg)';
@@ -142,6 +154,7 @@ function renderProducts (arr) {
         const productImage = document.createElement('img');
         productImage.setAttribute('src', product.image);
         productImage.classList.add('product-image');
+        productImage.addEventListener('click', openProduct);
     
         const productInfoDiv = document.createElement('div');
         productInfoDiv.classList.add('product-info');
